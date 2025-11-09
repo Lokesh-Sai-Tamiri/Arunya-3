@@ -1,99 +1,112 @@
 /**
- * Application Constants
- * This file exports various constants used throughout the application
+ * Application Constants - Aarunya Villas
+ * This file exports various constants for Greenrich Highlands villa project
  */
 
-// Flavor variants for the flavor slider
+// Villa Types for the villa showcase slider
 const flavorlists = [
   {
-    name: "Chocolate Milk",
+    name: "The Heritage Villa",
     color: "brown",
     rotation: "md:rotate-[-8deg] rotate-0",
+    sqft: "7,150 sq.ft",
   },
   {
-    name: "Stawberry Milk",
+    name: "The Premium Villa",
     color: "red",
     rotation: "md:rotate-[8deg] rotate-0",
+    sqft: "6,500 sq.ft",
   },
   {
-    name: "Cookies & Cream",
+    name: "The Executive Villa",
     color: "blue",
     rotation: "md:rotate-[-8deg] rotate-0",
+    sqft: "6,200 sq.ft",
   },
   {
-    name: "Peanut Butter Chocolate",
+    name: "The Elite Villa",
     color: "orange",
     rotation: "md:rotate-[8deg] rotate-0",
+    sqft: "5,950 sq.ft",
   },
   {
-    name: "Vanilla Milkshake",
+    name: "The Classic Villa",
     color: "white",
     rotation: "md:rotate-[-8deg] rotate-0",
+    sqft: "5,800 sq.ft",
   },
   {
-    name: "Max Chocolate Milk",
+    name: "The Signature Villa",
     color: "black",
     rotation: "md:rotate-[8deg] rotate-0",
+    sqft: "5,650 sq.ft",
   },
 ];
 
-// Nutrition information displayed in the nutrition section
+// Key Amenities & Features
 const nutrientLists = [
-  { label: "Potassium", amount: "245mg" },
-  { label: "Calcium", amount: "500mg" },
-  { label: "Vitamin A", amount: "176mcg" },
-  { label: "Vitamin D", amount: "5mcg" },
-  { label: "Iron", amount: "1mg" },
+  { label: "Total Villas", amount: "322" },
+  { label: "Clubhouse", amount: "50,000 sq.ft" },
+  { label: "Total Acres", amount: "45" },
+  { label: "Plot Sizes", amount: "383-720 sq.yds" },
+  { label: "Township", amount: "500 Acres" },
 ];
 
-// Testimonial video cards
+// Resident Testimonial cards
 const cards = [
   {
     src: "/videos/f1.mp4",
     rotation: "rotate-z-[-10deg]",
-    name: "Madison",
+    name: "Rajesh Kumar",
     img: "/images/p1.png",
     translation: "translate-y-[-5%]",
+    designation: "Villa Owner",
   },
   {
     src: "/videos/f2.mp4",
     rotation: "rotate-z-[4deg]",
-    name: "Alexander",
+    name: "Priya Sharma",
     img: "/images/p2.png",
+    designation: "Resident",
   },
   {
     src: "/videos/f3.mp4",
     rotation: "rotate-z-[-4deg]",
-    name: "Andrew",
+    name: "Amit Patel",
     img: "/images/p3.png",
     translation: "translate-y-[-5%]",
+    designation: "Property Investor",
   },
   {
     src: "/videos/f4.mp4",
     rotation: "rotate-z-[4deg]",
-    name: "Bryan",
+    name: "Sneha Reddy",
     img: "/images/p4.png",
     translation: "translate-y-[5%]",
+    designation: "Homeowner",
   },
   {
     src: "/videos/f5.mp4",
     rotation: "rotate-z-[-10deg]",
-    name: "Chris",
+    name: "Vikram Singh",
     img: "/images/p5.png",
+    designation: "Villa Resident",
   },
   {
     src: "/videos/f6.mp4",
     rotation: "rotate-z-[4deg]",
-    name: "Devante",
+    name: "Anjali Mehta",
     img: "/images/p6.png",
     translation: "translate-y-[5%]",
+    designation: "Happy Resident",
   },
   {
     src: "/videos/f7.mp4",
     rotation: "rotate-z-[-3deg]",
-    name: "Melisa",
+    name: "Karthik Rao",
     img: "/images/p7.png",
     translation: "translate-y-[10%]",
+    designation: "Villa Owner",
   },
 ];
 

@@ -14,11 +14,11 @@
 
  </div>
 
- <h3 style="font-weight:700;font-size:30px;">AWWWARDS Site of the Day Website</h3>
+ <h3 style="font-weight:700;font-size:30px;">Aarunya Villas by Greenrich - Luxury Villa Website</h3>
 
   <div >
-    Ready to build a website that has won an Awwwards Site of the Day?
-    This tutorial guides you through creating a stunning, interactive site using <b>GSAP</b>, <b>ReactJS</b>, and <b>Tailwind CSS</b>.
+    A stunning, award-winning website design for Aarunya Villas at Greenrich Highlands.
+    This project showcases 322 luxury sunrise-facing villas in Tukkuguda, Hyderabad, using <b>GSAP</b>, <b>ReactJS</b>, and <b>Tailwind CSS</b> for an immersive real estate experience.
    </div>
 </div>
 
@@ -34,26 +34,43 @@
 
 ## Introduction
 
-Dive into creating a cutting-edge web experience designed for Awwwards recognition, with **GSAP (GreenSock Animation Platform)** at its core. This project demonstrates how to leverage GSAP's powerful animation capabilities to craft fluid transitions, captivating scroll effects, and dynamic UI interactions, combining it with React and Tailwind CSS for a truly immersive and visually stunning website.
+Welcome to **Aarunya Villas** - A luxury real estate website showcasing Greenrich Highlands' premium villa community in Hyderabad. This cutting-edge web experience uses **GSAP (GreenSock Animation Platform)** to create fluid transitions, captivating scroll effects, and dynamic UI interactions. Built with React 19 and Tailwind CSS v4, this project demonstrates how to create an immersive and visually stunning real estate showcase that engages potential homebuyers.
+
+## About Aarunya Villas
+
+**Aarunya Villas** is a sunrise-facing luxury villa community within the expansive 500-acre Greenrich Highlands township near Tukkuguda, Hyderabad. 
+
+### Project Highlights:
+- 🏘️ **322 Luxury Villas** spanning 45 acres
+- 📐 **Built-up Areas**: 5,650 to 7,150 sq. ft.
+- 🏗️ **Plot Sizes**: 383 to 720 sq. yds.
+- 🏊 **50,000 sq. ft. Exclusive Clubhouse** with pool, gym, spa, and more
+- 🎓 **Proximity to Top Schools**: Manchester Global School (IB & CBSE), Gopichand Academy
+- 🌳 **Premium Amenities**: Temple, lake, sports courts, gated security
+- 📍 **Prime Location**: Tukkuguda, Srisailam Highway, with excellent ORR connectivity
+- 📞 **Contact**: +91 938 611 9999 | sales@greenrichvillas.com
 
 ## Tech Stack
 
 - ⚛️ React 19
 - 🌀 Tailwind CSS v4
 - 🎞️ GSAP (GreenSock Animation Platform)
+- 🎨 Centralized Theme System (Green Palette)
 
 ## Features
 
-In this course, You'll learn how to:
+This luxury real estate website showcases:
 
-- ✨ Parallax Like a Pro
-- ⚡️ Master Clip-Path Magic
-- 🕹️ Control ScrollTrigger & ScrollSmoother
-- 😉 Pin Elements with Style
-- 🧑‍💻 Reveal Text Like Awwwards Pros
-- 👏 Build GSAP Timelines that Actually Feel Good
-- 📱 It's Fully responsive and mobile-friendly
-- 🎨 Centralized Theme System for consistent styling
+- ✨ **Smooth Parallax Effects** for an immersive browsing experience
+- ⚡️ **Advanced Clip-Path Animations** revealing villa information elegantly
+- 🕹️ **ScrollTrigger & Pin Effects** to showcase villa types and amenities
+- 🏡 **Interactive Villa Showcase** with 6 different villa layouts
+- 🎯 **Dynamic Content Reveals** for benefits and features
+- 📸 **Resident Testimonials** with video carousel
+- 🎨 **Green Nature-Inspired Theme** with centralized color system
+- 📱 **Fully Responsive Design** optimized for all devices
+- 🌟 **Award-Winning Animations** using GSAP timelines
+- 📧 **Lead Generation Form** for inquiries and site visits
 
 ## Quick Start
 

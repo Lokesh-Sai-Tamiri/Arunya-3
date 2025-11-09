@@ -48,34 +48,34 @@ const BenefitSection = () => {
       <div className="container mx-auto pt-20">
         <div className="col-center">
           <p>
-            Unlock the Advantages: <br />
-            Explore the Key Benefits of Choosing SPYLT
+            Discover the Lifestyle: <br />
+            Explore the Key Benefits of Living at Aarunya Villas
           </p>
 
           <div className="mt-20 col-center">
             <ClipPathTitle
-              title={"Shelf stable"}
+              title={"Sunrise Facing"}
               color={theme.presets.benefitTitles.shelfStable.color}
               bg={theme.presets.benefitTitles.shelfStable.bg}
               className={"first-title"}
               borderColor={theme.presets.benefitTitles.shelfStable.borderColor}
             />
             <ClipPathTitle
-              title={"Protein + Caffeine"}
+              title={"Vastu Compliant"}
               color={theme.presets.benefitTitles.proteinCaffeine.color}
               bg={theme.presets.benefitTitles.proteinCaffeine.bg}
               className={"second-title"}
               borderColor={theme.presets.benefitTitles.proteinCaffeine.borderColor}
             />
             <ClipPathTitle
-              title={"Infinitely recyclable"}
+              title={"Gated Community"}
               color={theme.presets.benefitTitles.recyclable.color}
               bg={theme.presets.benefitTitles.recyclable.bg}
               className={"third-title"}
               borderColor={theme.presets.benefitTitles.recyclable.borderColor}
             />
             <ClipPathTitle
-              title={"Lactose free"}
+              title={"Prime Location"}
               color={theme.presets.benefitTitles.lactoseFree.color}
               bg={theme.presets.benefitTitles.lactoseFree.bg}
               className={"fourth-title"}
@@ -84,7 +84,7 @@ const BenefitSection = () => {
           </div>
 
           <div className="md:mt-0 mt-10">
-            <p>And much more ...</p>
+            <p>And many more premium features ...</p>
           </div>
         </div>
       </div>

@@ -79,7 +79,7 @@ const HeroSection = () => {
           </>
         ) : (
           <video
-            src="/videos/hero-bg.mp4"
+            src="/videos/hero-bg.webm"
             autoPlay
             muted
             playsInline
@@ -88,7 +88,7 @@ const HeroSection = () => {
         )}
         <div className="hero-content opacity-0">
           <div className="overflow-hidden">
-            <h1 className="hero-title">Freaking Delicious</h1>
+            <h1 className="hero-title">Luxury Living Redefined</h1>
           </div>
           <div
             style={{
@@ -97,18 +97,14 @@ const HeroSection = () => {
             className="hero-text-scroll"
           >
             <div className="hero-subtitle">
-              <h1>Protein + Caffine </h1>
+              <h1>Aarunya Villas</h1>
             </div>
           </div>
-
-          <h2>
-            Live life to the fullest  with SPYLT: Shatter boredom and embrace
-            your inner kid with every deliciously smooth chug.
-          </h2>
-
-          <div className="hero-button">
-            <p>Chug a SPYLT</p>
-          </div>
+          <p className="hero-description">
+            Experience sunrise-facing luxury villas at Greenrich Highlands. 322
+            exclusive homes nestled in 45 acres of tranquil paradise.
+          </p>{" "}
+          <button className="hero-button">Explore Villas</button>
         </div>
       </div>
     </section>
