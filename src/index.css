@@ -99,7 +99,7 @@ body::-webkit-scrollbar {
   }
 
   .message-content {
-    @apply bg-dark-brown text-milk min-h-dvh overflow-hidden flex justify-center items-center relative z-20;
+    @apply bg-[#7f3b2d] text-milk min-h-dvh overflow-hidden flex justify-center items-center relative z-20;
 
     .msg-wrapper {
       @apply 2xl:text-[8.5rem] md:text-8xl text-5xl font-bold uppercase leading-[9vw] tracking-[-.35vw] flex flex-col justify-center items-center md:gap-24 gap-14;
@@ -219,7 +219,7 @@ body::-webkit-scrollbar {
     }
 
     .vd-pin-section {
-      @apply md:h-[110vh] h-dvh overflow-hidden md:-translate-y-[15%] md:mt-0 mt-20;
+      @apply md:h-[110vh] h-dvh overflow-hidden md: !-translate-y-[15%] md:mt-0 mt-20;
 
       video {
         @apply size-full absolute inset-0 object-cover;
@@ -233,15 +233,6 @@ body::-webkit-scrollbar {
         @apply size-[15vw];
       }
     }
-  }
-
-  .hero-description {
-    @apply text-milk;
-    font-family: "Antonio", sans-serif;
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 1.2;
-    letter-spacing: -0.05em;
   }
 
   .testimonials-section {

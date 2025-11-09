@@ -55,7 +55,7 @@ const nutrientLists = [
 // Resident Testimonial cards
 const cards = [
   {
-    src: "/videos/f1.mp4",
+    src: "/videos/hero-bg.webm",
     rotation: "rotate-z-[-10deg]",
     name: "Rajesh Kumar",
     img: "/images/p1.png",
@@ -63,14 +63,14 @@ const cards = [
     designation: "Villa Owner",
   },
   {
-    src: "/videos/f2.mp4",
+    src: "/videos/hero-bg.webm",
     rotation: "rotate-z-[4deg]",
     name: "Priya Sharma",
     img: "/images/p2.png",
     designation: "Resident",
   },
   {
-    src: "/videos/f3.mp4",
+    src: "/videos/hero-bg.webm",
     rotation: "rotate-z-[-4deg]",
     name: "Amit Patel",
     img: "/images/p3.png",
@@ -78,7 +78,7 @@ const cards = [
     designation: "Property Investor",
   },
   {
-    src: "/videos/f4.mp4",
+    src: "/videos/hero-bg.webm",
     rotation: "rotate-z-[4deg]",
     name: "Sneha Reddy",
     img: "/images/p4.png",
@@ -86,14 +86,14 @@ const cards = [
     designation: "Homeowner",
   },
   {
-    src: "/videos/f5.mp4",
+    src: "/videos/hero-bg.webm",
     rotation: "rotate-z-[-10deg]",
     name: "Vikram Singh",
     img: "/images/p5.png",
     designation: "Villa Resident",
   },
   {
-    src: "/videos/f6.mp4",
+    src: "/videos/hero-bg.webm",
     rotation: "rotate-z-[4deg]",
     name: "Anjali Mehta",
     img: "/images/p6.png",
@@ -101,7 +101,7 @@ const cards = [
     designation: "Happy Resident",
   },
   {
-    src: "/videos/f7.mp4",
+    src: "/videos/hero-bg.webm",
     rotation: "rotate-z-[-3deg]",
     name: "Karthik Rao",
     img: "/images/p7.png",

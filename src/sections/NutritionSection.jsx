@@ -66,11 +66,11 @@ const NutritionSection = () => {
 
   return (
     <section className="nutrition-section">
-      <img
+      {/* <img
         src="/images/slider-dip.png"
         alt=""
         className="w-full object-cover"
-      />
+      /> */}
 
       <img src="/images/big-img.png" alt="" className="big-img" />
 
@@ -96,8 +96,9 @@ const NutritionSection = () => {
         <div className="flex md:justify-center items-center translate-y-5">
           <div className="md:max-w-xs max-w-md">
             <p className="text-lg md:text-right text-balance font-paragraph">
-              Experience world-class facilities including 50,000 sq.ft clubhouse,
-              swimming pool, gym, spa, temple, and sports courts within 500-acre township
+              Experience world-class facilities including 50,000 sq.ft
+              clubhouse, swimming pool, gym, spa, temple, and sports courts
+              within 500-acre township
             </p>
           </div>
         </div>

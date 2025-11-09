@@ -1,18 +1,13 @@
-import { useMediaQuery } from "react-responsive";
 import theme from "../constants/theme";
 
 const FooterSection = () => {
-  const isMobile = useMediaQuery({
-    query: "(max-width: 768px)",
-  });
-
   return (
     <section className="footer-section">
-      <img
+      {/* <img
         src="/images/footer-dip.png"
         alt=""
         className="w-full object-cover -translate-y-1"
-      />
+      /> */}
 
       <div className="2xl:h-[110dvh] relative md:pt-[20vh] pt-[10vh]">
         <div className="overflow-hidden z-10">
@@ -20,21 +15,6 @@ const FooterSection = () => {
             #LiveGreenRich
           </h1>
         </div>
-
-        {isMobile ? (
-          <img
-            src="/images/footer-drink.png"
-            className="absolute top-0 object-contain"
-          />
-        ) : (
-          <video
-            src="/videos/splash.mp4"
-            autoPlay
-            playsInline
-            muted
-            className="absolute top-0 object-contain mix-blend-lighten"
-          />
-        )}
 
         <div className="flex-center gap-5 relative z-10 md:mt-20 mt-5">
           <div className="social-btn">
@@ -53,11 +33,11 @@ const FooterSection = () => {
             <div>
               <p>Aarunya Villas</p>
             </div>
-            <div>
+            {/* <div>
               <p>Villa Types</p>
               <p>Amenities</p>
               <p>Location</p>
-            </div>
+            </div> */}
             <div>
               <p>Greenrich Group</p>
               <p>Contact: +91 938 611 9999</p>
@@ -67,8 +47,8 @@ const FooterSection = () => {
 
           <div className="md:max-w-lg">
             <p>
-              Get Exclusive Information About Villa Availability,
-              Site Visits, and Special Offers!
+              Get Exclusive Information About Villa Availability, Site Visits,
+              and Special Offers!
             </p>
             <div
               className="flex justify-between items-center border-b py-5 md:mt-10"
@@ -89,7 +69,10 @@ const FooterSection = () => {
 
         <div className="copyright-box">
           {/* The final row with copyright and legal links. */}
-          <p>Copyright © 2025 Greenrich Highlands - Aarunya Villas - All Rights Reserved</p>
+          <p>
+            Copyright © 2025 Greenrich Highlands - Aarunya Villas - All Rights
+            Reserved
+          </p>
           <div className="flex items-center gap-7">
             <p>Privacy Policy</p>
             <p>Terms & Conditions</p>
