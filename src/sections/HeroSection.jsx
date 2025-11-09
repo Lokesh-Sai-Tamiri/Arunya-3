@@ -4,10 +4,6 @@ import { SplitText } from "gsap/all";
 import { useMediaQuery } from "react-responsive";
 
 const HeroSection = () => {
-  const isMobile = useMediaQuery({
-    query: "(max-width: 768px)",
-  });
-
   const isTablet = useMediaQuery({
     query: "(max-width: 1024px)",
   });
@@ -65,18 +61,7 @@ const HeroSection = () => {
     <section className="bg-main-bg">
       <div className="hero-container">
         {isTablet ? (
-          <>
-            {isMobile && (
-              <img
-                src="/images/hero-bg.png"
-                className="absolute bottom-40 size-full object-cover"
-              />
-            )}
-            <img
-              src="/images/hero-img.png"
-              className="absolute bottom-0 left-1/2 -translate-x-1/2 object-auto"
-            />
-          </>
+          <></>
         ) : (
           <video
             src="/videos/hero-bg.webm"
