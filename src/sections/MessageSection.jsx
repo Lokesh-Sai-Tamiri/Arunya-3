@@ -69,7 +69,7 @@ const MessageSection = () => {
 
   return (
     <section className="message-content">
-      <div className="container mx-auto flex-center py-28 relative">
+      <div className="w-full mx-auto flex-center py-16 sm:py-20 md:py-24 lg:py-28 relative">
         <div className="w-full h-full">
           <div className="msg-wrapper">
             <h1 className="first-message">
@@ -82,7 +82,7 @@ const MessageSection = () => {
               }}
               className="msg-text-scroll"
             >
-              <div className="bg-light-brown md:pb-5 pb-3 px-5">
+              <div className="bg-light-brown pb-3 sm:pb-4 md:pb-5 px-3 sm:px-4 md:px-5">
                 <h2 className="text-red-brown">Nature Thrives</h2>
               </div>
             </div>
@@ -92,8 +92,8 @@ const MessageSection = () => {
             </h1>
           </div>
 
-          <div className="flex-center md:mt-20 mt-10">
-            <div className="max-w-md px-10 flex-center overflow-hidden">
+          <div className="flex-center mt-8 sm:mt-10 md:mt-16 lg:mt-20">
+            <div className="max-w-xs sm:max-w-sm md:max-w-md px-6 sm:px-8 md:px-10 flex-center overflow-hidden">
               <p>
                 Embrace a lifestyle of elegance and serenity at Greenrich
                 Highlands, where every sunrise brings new possibilities and

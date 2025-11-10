@@ -74,28 +74,32 @@ const NutritionSection = () => {
 
       <img src="/images/big-img.png" alt="" className="big-img" />
 
-      <div className="flex md:flex-row flex-col justify-between md:px-10 px-5 mt-14 md:mt-0">
-        <div className="relative inline-block md:translate-y-20">
-          <div className="general-title relative flex flex-col justify-center items-center gap-24">
-            <div className="overflow-hidden place-self-start">
-              <h1 className="nutrition-title">Premium</h1>
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-stretch px-4 sm:px-6 md:px-10 mt-6 sm:mt-8 md:mt-10 lg:mt-0 gap-4 sm:gap-6 md:gap-4 pb-[200px] sm:pb-[220px] md:pb-[180px] lg:pb-[200px]">
+        <div className="relative inline-block w-full md:w-auto md:translate-y-20 translate-y-0">
+          <div className="general-title relative flex flex-col justify-center items-center sm:items-start gap-6 sm:gap-10 md:gap-12 lg:gap-16 xl:gap-20">
+            <div className="overflow-hidden place-self-center sm:place-self-start">
+              <h1 className="nutrition-title text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[8.5rem]">
+                Premium
+              </h1>
             </div>
             <div
               style={{
                 clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
               }}
-              className="nutrition-text-scroll place-self-start"
+              className="nutrition-text-scroll place-self-center sm:place-self-start"
             >
-              <div className="bg-yellow-brown pb-5 md:pt-0 pt-3 md:px-5 px-3">
-                <h2 className="text-milk-yellow">Amenities</h2>
+              <div className="bg-yellow-brown pb-2 sm:pb-3 md:pb-4 lg:pb-5 pt-1 sm:pt-2 md:pt-2 lg:pt-0 px-2 sm:px-3 md:px-5 lg:px-8">
+                <h2 className="text-milk-yellow text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
+                  Amenities
+                </h2>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="flex md:justify-center items-center translate-y-5">
-          <div className="md:max-w-xs max-w-md">
-            <p className="text-lg md:text-right text-balance font-paragraph">
+        <div className="flex justify-center md:justify-center items-start md:items-center w-full md:w-auto translate-y-0 md:translate-y-5 mt-4 sm:mt-6 md:mt-0">
+          <div className="w-full max-w-sm sm:max-w-md md:max-w-xs lg:max-w-sm">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-center md:text-right font-paragraph leading-relaxed">
               Experience world-class facilities including 50,000 sq.ft
               clubhouse, swimming pool, gym, spa, temple, and sports courts
               within 500-acre township
@@ -106,11 +110,18 @@ const NutritionSection = () => {
         <div className="nutrition-box">
           <div className="list-wrapper">
             {lists.map((nutrient, index) => (
-              <div key={index} className="relative flex-1 col-center">
-                <div>
-                  <p className="md:text-lg font-paragraph">{nutrient.label}</p>
-                  <p className="font-paragraph text-sm mt-2">up to</p>
-                  <p className="text-2xl md:text-4xl tracking-tighter font-bold">
+              <div
+                key={index}
+                className="relative flex-1 min-w-[90px] sm:min-w-[110px] md:min-w-[120px] col-center"
+              >
+                <div className="text-center">
+                  <p className="text-xs sm:text-sm md:text-base lg:text-lg font-paragraph">
+                    {nutrient.label}
+                  </p>
+                  <p className="font-paragraph text-[10px] sm:text-xs md:text-sm mt-0.5 sm:mt-1 md:mt-1.5">
+                    up to
+                  </p>
+                  <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl tracking-tight font-bold mt-0.5">
                     {nutrient.amount}
                   </p>
                 </div>

@@ -38,13 +38,17 @@ const VideoPinSection = () => {
       >
         <video src="/videos/hero-bg.webm" playsInline muted loop autoPlay />
 
-        <div className="abs-center md:scale-100 scale-200">
-          <img src="/images/circle-text.svg" alt="" className="spin-circle" />
+        <div className="abs-center scale-100 md:scale-100">
+          <img
+            src="/images/circle-text.svg"
+            alt="Play video"
+            className="spin-circle w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64"
+          />
           <div className="play-btn">
             <img
               src="/images/play.svg"
-              alt=""
-              className="size-[3vw] ml-[.5vw]"
+              alt="Play"
+              className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 xl:w-[3vw] xl:h-[3vw] ml-1 sm:ml-1.5 md:ml-2 lg:ml-[.5vw]"
             />
           </div>
         </div>

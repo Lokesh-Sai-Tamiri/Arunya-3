@@ -58,7 +58,7 @@ const HeroSection = () => {
   });
 
   return (
-    <section className="bg-main-bg">
+    <section className="bg-main-bg w-full overflow-hidden">
       <div className="hero-container">
         {isTablet ? (
           <></>
@@ -72,7 +72,7 @@ const HeroSection = () => {
           />
         )}
         <div className="hero-content opacity-0">
-          <div className="overflow-hidden">
+          <div className="overflow-hidden w-full flex justify-center">
             <h1 className="hero-title">Luxury Living Redefined</h1>
           </div>
           <div
@@ -85,10 +85,10 @@ const HeroSection = () => {
               <h1>Aarunya Villas</h1>
             </div>
           </div>
-          <p className="hero-description">
+          <h2 className="text-white">
             Experience sunrise-facing luxury villas at Greenrich Highlands. 322
             exclusive homes nestled in 45 acres of tranquil paradise.
-          </p>{" "}
+          </h2>
           <button className="hero-button">Explore Villas</button>
         </div>
       </div>

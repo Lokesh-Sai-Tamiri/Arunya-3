@@ -12,22 +12,22 @@ const FlavorSlider = () => {
   });
 
   useGSAP(() => {
-    const scrollAmount = sliderRef.current.scrollWidth - window.innerWidth;
+    if (!isTablet && sliderRef.current) {
+      const scrollAmount = sliderRef.current.scrollWidth - window.innerWidth;
 
-    if (!isTablet) {
       const tl = gsap.timeline({
         scrollTrigger: {
-          trigger: ".flavor-section",
-          start: "2% top",
+          trigger: ".slider-wrapper",
+          start: "top top",
           end: `+=${scrollAmount + 1500}px`,
           scrub: true,
-          pin: true,
+          pin: ".flavor-section",
         },
       });
 
-      tl.to(".flavor-section", {
-        x: `-${scrollAmount + 1500}px`,
-        ease: "power1.inOut",
+      tl.to(sliderRef.current, {
+        x: `-${scrollAmount}px`,
+        ease: "none",
       });
     }
 
@@ -61,7 +61,7 @@ const FlavorSlider = () => {
         },
         "<"
       );
-  });
+  }, [isTablet]);
 
   return (
     <div ref={sliderRef} className="slider-wrapper">
@@ -69,7 +69,7 @@ const FlavorSlider = () => {
         {flavorlists.map((flavor) => (
           <div
             key={flavor.name}
-            className={`relative z-30 lg:w-[50vw] w-96 lg:h-[70vh] md:w-[90vw] md:h-[50vh] h-80 flex-none ${flavor.rotation}`}
+            className={`relative z-30 w-[85vw] sm:w-96 md:w-[90vw] lg:w-[50vw] h-72 sm:h-80 md:h-[50vh] lg:h-[70vh] flex-none ${flavor.rotation} overflow-hidden rounded-2xl sm:rounded-3xl`}
           >
             {/* <img
               src={`/images/${flavor.color}-bg.svg`}
@@ -79,7 +79,7 @@ const FlavorSlider = () => {
 
             <img
               src={`/images/${flavor.color}.jpg`}
-              alt=""
+              alt={flavor.name}
               className="drinks"
             />
 

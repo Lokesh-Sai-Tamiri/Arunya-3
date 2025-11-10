@@ -9,22 +9,46 @@ import NutritionSection from "./sections/NutritionSection";
 import BenefitSection from "./sections/BenefitSection";
 import TestimonialSection from "./sections/TestimonialSection";
 import FooterSection from "./sections/FooterSection";
+import { useMediaQuery } from "react-responsive";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 const App = () => {
-  useGSAP(() => {
-    ScrollSmoother.create({
-      smooth: 3,
-      effects: true,
-    });
+  const isDesktop = useMediaQuery({
+    query: "(min-width: 1025px)",
   });
 
+  useGSAP(() => {
+    // Only enable ScrollSmoother on desktop for better performance
+    if (isDesktop) {
+      ScrollSmoother.create({
+        smooth: 3,
+        effects: true,
+      });
+    }
+  }, [isDesktop]);
+
   return (
-    <main>
+    <main className="w-full max-w-full overflow-x-hidden">
       <NavBar />
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
+      {isDesktop ? (
+        <div id="smooth-wrapper">
+          <div id="smooth-content">
+            <HeroSection />
+            <MessageSection />
+            <FlavorSection />
+            <NutritionSection />
+
+            <div>
+              <BenefitSection />
+              <TestimonialSection />
+            </div>
+
+            <FooterSection />
+          </div>
+        </div>
+      ) : (
+        <>
           <HeroSection />
           <MessageSection />
           <FlavorSection />
@@ -36,8 +60,8 @@ const App = () => {
           </div>
 
           <FooterSection />
-        </div>
-      </div>
+        </>
+      )}
     </main>
   );
 };

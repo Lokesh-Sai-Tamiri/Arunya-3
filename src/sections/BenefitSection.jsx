@@ -45,14 +45,14 @@ const BenefitSection = () => {
 
   return (
     <section className="benefit-section">
-      <div className="container mx-auto pt-20">
+      <div className="w-full mx-auto pt-12 sm:pt-16 md:pt-20 px-4 sm:px-6 md:px-8">
         <div className="col-center">
           <p>
-            Discover the Lifestyle: <br />
+            Discover the Lifestyle: <br className="hidden sm:block" />
             Explore the Key Benefits of Living at Aarunya Villas
           </p>
 
-          <div className="mt-20 col-center">
+          <div className="mt-12 sm:mt-16 md:mt-20 col-center w-full gap-2 sm:gap-3 md:gap-4">
             <ClipPathTitle
               title={"Sunrise Facing"}
               color={theme.presets.benefitTitles.shelfStable.color}
@@ -83,13 +83,13 @@ const BenefitSection = () => {
             />
           </div>
 
-          <div className="md:mt-0 mt-10">
+          <div className="mt-8 sm:mt-10 md:mt-12 lg:mt-0">
             <p>And many more premium features ...</p>
           </div>
         </div>
       </div>
 
-      <div className="relative overlay-box">
+      <div className="relative overlay-box w-full">
         <VideoPinSection />
       </div>
     </section>
