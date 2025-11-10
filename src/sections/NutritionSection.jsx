@@ -21,48 +21,51 @@ const NutritionSection = () => {
   }, [isMobile]);
 
   useGSAP(() => {
-    const titleSplit = SplitText.create(".nutrition-title", {
-      type: "chars",
-    });
-    const paragraphSplit = SplitText.create(".nutrition-section p", {
-      type: "words, lines",
-      linesClass: "paragraph-line",
-    });
-
-    const contentTl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".nutrition-section",
-        start: "top center",
-      },
-    });
-    contentTl
-      .from(titleSplit.chars, {
-        yPercent: 100,
-        stagger: 0.02,
-        ease: "power2.out",
-      })
-      .from(paragraphSplit.words, {
-        yPercent: 300,
-        rotate: 3,
-        ease: "power1.inOut",
-        duration: 1,
-        stagger: 0.01,
+    // Only run animations on desktop
+    if (!isMobile) {
+      const titleSplit = SplitText.create(".nutrition-title", {
+        type: "chars",
+      });
+      const paragraphSplit = SplitText.create(".nutrition-paragraph", {
+        type: "words, lines",
+        linesClass: "paragraph-line",
       });
 
-    const titleTl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".nutrition-section",
-        start: "top 80%",
-      },
-    });
+      const contentTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".nutrition-section",
+          start: "top center",
+        },
+      });
+      contentTl
+        .from(titleSplit.chars, {
+          yPercent: 100,
+          stagger: 0.02,
+          ease: "power2.out",
+        })
+        .from(paragraphSplit.words, {
+          yPercent: 300,
+          rotate: 3,
+          ease: "power1.inOut",
+          duration: 1,
+          stagger: 0.01,
+        });
 
-    titleTl.to(".nutrition-text-scroll", {
-      duration: 1,
-      opacity: 1,
-      clipPath: "polygon(100% 0, 0 0, 0 100%, 100% 100%)",
-      ease: "power1.inOut",
-    });
-  });
+      const titleTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".nutrition-section",
+          start: "top 80%",
+        },
+      });
+
+      titleTl.to(".nutrition-text-scroll", {
+        duration: 1,
+        opacity: 1,
+        clipPath: "polygon(100% 0, 0 0, 0 100%, 100% 100%)",
+        ease: "power1.inOut",
+      });
+    }
+  }, [isMobile]);
 
   return (
     <section className="nutrition-section">
@@ -75,31 +78,41 @@ const NutritionSection = () => {
       <img src="/images/big-img.png" alt="" className="big-img" />
 
       <div className="flex flex-col md:flex-row justify-between items-start md:items-stretch px-4 sm:px-6 md:px-10 mt-6 sm:mt-8 md:mt-10 lg:mt-0 gap-4 sm:gap-6 md:gap-4 pb-[200px] sm:pb-[220px] md:pb-[180px] lg:pb-[200px]">
-        <div className="relative inline-block w-full md:w-auto md:translate-y-20 translate-y-0">
-          <div className="general-title relative flex flex-col justify-center items-center sm:items-start gap-6 sm:gap-10 md:gap-12 lg:gap-16 xl:gap-20">
-            <div className="overflow-hidden place-self-center sm:place-self-start">
-              <h1 className="nutrition-title text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[8.5rem]">
-                Premium
-              </h1>
-            </div>
-            <div
-              style={{
-                clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
-              }}
-              className="nutrition-text-scroll place-self-center sm:place-self-start"
-            >
-              <div className="bg-yellow-brown pb-2 sm:pb-3 md:pb-4 lg:pb-5 pt-1 sm:pt-2 md:pt-2 lg:pt-0 px-2 sm:px-3 md:px-5 lg:px-8">
-                <h2 className="text-milk-yellow text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
-                  Amenities
-                </h2>
+        {isMobile ? (
+          <div className="w-full mb-4">
+            <h1 className="text-3xl sm:text-4xl font-bold text-center">
+              Premium Amenities
+            </h1>
+          </div>
+        ) : (
+          <div className="relative inline-block w-full md:w-auto md:translate-y-20 translate-y-0">
+            <div className="general-title relative flex flex-col justify-center items-center sm:items-start gap-6 sm:gap-10 md:gap-12 lg:gap-16 xl:gap-20">
+              <div className="overflow-hidden place-self-center sm:place-self-start">
+                <h1 className="nutrition-title text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[8.5rem] text-center sm:text-left">
+                  Premium
+                </h1>
+              </div>
+              <div
+                style={{ clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)" }}
+                className="nutrition-text-scroll place-self-center sm:place-self-start"
+              >
+                <div className="bg-yellow-brown pb-2 sm:pb-3 md:pb-4 lg:pb-5 pt-1 sm:pt-2 md:pt-2 lg:pt-0 px-2 sm:px-3 md:px-5 lg:px-8">
+                  <h2 className="text-milk-yellow text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
+                    Amenities
+                  </h2>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        )}
 
         <div className="flex justify-center md:justify-center items-start md:items-center w-full md:w-auto translate-y-0 md:translate-y-5 mt-4 sm:mt-6 md:mt-0">
           <div className="w-full max-w-sm sm:max-w-md md:max-w-xs lg:max-w-sm">
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-center md:text-right font-paragraph leading-relaxed">
+            <p
+              className={`text-sm sm:text-base md:text-lg lg:text-xl text-center md:text-right font-paragraph leading-relaxed ${
+                !isMobile ? "nutrition-paragraph" : ""
+              }`}
+            >
               Experience world-class facilities including 50,000 sq.ft
               clubhouse, swimming pool, gym, spa, temple, and sports courts
               within 500-acre township

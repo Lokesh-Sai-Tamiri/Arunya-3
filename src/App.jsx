@@ -55,15 +55,9 @@ const App = () => {
         <>
           <HeroSection />
           <MessageSection />
-          <FlavorSection />
           <NutritionSection />
           <ComparisonSection />
           <MarqueeSection />
-
-          <div>
-            <BenefitSection />
-            <TestimonialSection />
-          </div>
 
           <FooterSection />
         </>

@@ -61,7 +61,11 @@ const HeroSection = () => {
     <section className="bg-main-bg w-full overflow-hidden">
       <div className="hero-container">
         {isTablet ? (
-          <></>
+          <img
+            src="/images/big-img.jpg"
+            alt="Hero Background"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
         ) : (
           <video
             src="/videos/hero-bg.webm"
@@ -71,9 +75,13 @@ const HeroSection = () => {
             className="absolute inset-0 w-full h-full object-cover"
           />
         )}
-        <div className="hero-content opacity-0">
+        {/* Black overlay mask */}
+        <div className="absolute inset-0 bg-black/50 z-[1]"></div>
+        <div className="hero-content opacity-0 relative z-[2]">
           <div className="overflow-hidden w-full flex justify-center">
-            <h1 className="hero-title">Luxury Living Redefined</h1>
+            <h1 className={`hero-title ${isTablet ? "!text-white" : ""}`}>
+              Luxury Living Redefined
+            </h1>
           </div>
           <div
             style={{
