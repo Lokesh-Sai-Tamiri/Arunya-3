@@ -9,6 +9,8 @@ import NutritionSection from "./sections/NutritionSection";
 import BenefitSection from "./sections/BenefitSection";
 import TestimonialSection from "./sections/TestimonialSection";
 import FooterSection from "./sections/FooterSection";
+import ComparisonSection from "./sections/ComparisonSection";
+import MarqueeSection from "./sections/MarqueeSection";
 import { useMediaQuery } from "react-responsive";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
@@ -38,6 +40,8 @@ const App = () => {
             <MessageSection />
             <FlavorSection />
             <NutritionSection />
+            <ComparisonSection />
+            <MarqueeSection />
 
             <div>
               <BenefitSection />
@@ -53,6 +57,8 @@ const App = () => {
           <MessageSection />
           <FlavorSection />
           <NutritionSection />
+          <ComparisonSection />
+          <MarqueeSection />
 
           <div>
             <BenefitSection />

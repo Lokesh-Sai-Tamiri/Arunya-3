@@ -253,7 +253,7 @@ body::-webkit-scrollbar {
     }
 
     h1 {
-      @apply uppercase text-[18.5vw] leading-[105%] tracking-[-.4vw] ml-[2vw] font-bold;
+      @apply uppercase text-[16.5vw] leading-[105%] tracking-[-.4vw] ml-[2vw] font-bold;
     }
   }
 
@@ -294,5 +294,107 @@ body::-webkit-scrollbar {
 
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Marquee Animation */
+:root {
+  --marquee-width: 100%;
+  --marquee-height: auto;
+  --marquee-elements-displayed: 4.5;
+  --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
+  --marquee-elements: 10;
+  --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --marquee-elements-displayed: 3;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --marquee-elements-displayed: 2.5;
+  }
+}
+
+@media (max-width: 390px) {
+  :root {
+    --marquee-elements-displayed: 1.5;
+  }
+}
+
+.marquee-container {
+  width: var(--marquee-width);
+  height: var(--marquee-height);
+  overflow: hidden;
+  position: relative;
+  padding: 2rem 0;
+}
+
+.marquee-content {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  animation: scrolling var(--marquee-animation-duration) linear infinite;
+  gap: 0;
+}
+
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements)));
+  }
+}
+
+.marquee-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: var(--marquee-element-width);
+  white-space: nowrap;
+  padding: 1rem;
+}
+
+.marquee-logo {
+  width: 180px;
+  height: 120px;
+  filter: grayscale(80%);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.marquee-logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+@media (max-width: 1440px) {
+  .marquee-logo {
+    width: 150px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .marquee-logo {
+    width: 120px;
+  }
+}
+
+@media (max-width: 640px) {
+  .marquee-logo {
+    width: 100px;
   }
 }
