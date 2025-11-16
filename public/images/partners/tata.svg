@@ -1,0 +1,6 @@
+<svg width="200" height="120" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="120" fill="#ffffff" rx="8"/>
+  <text x="100" y="65" font-family="Arial, sans-serif" font-size="34" font-weight="bold" fill="#1A4C8B" text-anchor="middle">TATA</text>
+  <text x="100" y="90" font-family="Arial, sans-serif" font-size="12" fill="#666666" text-anchor="middle">STEEL</text>
+</svg>
+

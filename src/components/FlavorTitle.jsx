@@ -42,9 +42,9 @@ const FlavorTitle = () => {
   });
 
   return (
-    <div className="general-title col-center h-full gap-8 sm:gap-12 md:gap-16 xl:gap-24 2xl:gap-32 justify-center">
+    <div className="general-title col-center h-full gap-6 sm:gap-10 md:gap-14 xl:gap-20 2xl:gap-28 justify-center w-full px-4 sm:px-6 md:px-8">
       <div className="overflow-hidden py-2 sm:py-3 2xl:py-0 first-text-split w-full flex justify-center">
-        <h1>Discover 6</h1>
+        <h1 className="text-center">Discover 6</h1>
       </div>
 
       <div
@@ -59,7 +59,7 @@ const FlavorTitle = () => {
       </div>
 
       <div className="overflow-hidden py-2 sm:py-3 2xl:py-0 second-text-split w-full flex justify-center">
-        <h1>villa layouts</h1>
+        <h1 className="text-center">villa layouts</h1>
       </div>
     </div>
   );
