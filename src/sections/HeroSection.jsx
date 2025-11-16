@@ -80,7 +80,7 @@ const HeroSection = () => {
         <div className="hero-content opacity-0 relative z-[2]">
           <div className="overflow-hidden w-full flex justify-center">
             <h1 className={`hero-title ${isTablet ? "!text-white" : ""}`}>
-              Luxury Living Redefined
+              Halcyon Lifestyle Redefined
             </h1>
           </div>
           <div
