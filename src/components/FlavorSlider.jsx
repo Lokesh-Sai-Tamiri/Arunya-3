@@ -12,6 +12,18 @@ const FlavorSlider = () => {
   });
 
   useGSAP(() => {
+    // Force reset all elements to initial positions
+    gsap.set([".general-title", ".first-text-split", ".flavor-text-scroll", ".second-text-split"], {
+      xPercent: 0,
+      x: 0,
+      clearProps: "transform",
+    });
+
+    if (sliderRef.current) {
+      // Set slider initial position
+      gsap.set(sliderRef.current, { x: 0 });
+    }
+
     if (!isTablet && sliderRef.current) {
       const scrollAmount = sliderRef.current.scrollWidth - window.innerWidth;
 
@@ -30,37 +42,6 @@ const FlavorSlider = () => {
         ease: "none",
       });
     }
-
-    const titleTl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".flavor-section",
-        start: "top top",
-        end: "bottom 80%",
-        scrub: true,
-      },
-    });
-
-    titleTl
-      .to(".first-text-split", {
-        xPercent: 0,
-        ease: "power1.inOut",
-      })
-      .to(
-        ".flavor-text-scroll",
-        {
-          xPercent: 0,
-          ease: "power1.inOut",
-        },
-        "<"
-      )
-      .to(
-        ".second-text-split",
-        {
-          xPercent: 0,
-          ease: "power1.inOut",
-        },
-        "<"
-      );
   }, [isTablet]);
 
   return (
